@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="mainmenu-border">
+    <button id="login-btn"><p class="p-login">Login</button>
+    <div class="title">  Consumer Finance Business Tool   </div>
+    <div id="popup" class="popup">
+      <div class="popup-content">
+          <span class="close-btn">&times;</span>
+          <h2 style="text-align: center;">Login</h2>
+          
+         
+          <form action="#">
+              <center>
+              <img src="https://drive.google.com/thumbnail?id=1XL2AbSkjutd_w7zhaVdN544rMv5M6xw_" alt="person" width="150px" height="150px">
+              </center>
+              <div class="inputbox">
+
+                <span >Username:</span>
+                <input type="text" id="username" name="username" required>
+                <span >Password:</span>
+                <input type="password" id="password" name="password" required>
+              </div>
+              
+              <button type="submit"><p id="p-login">Login</button></p>
+          </form>
+      </div>
+  </div>
+</div>
+    </div>
+   
+    
+  </div>
+    
+    <div class="ListProduct"></div>
+</div>
+    
+    
+
+    <script>
+
+  document.getElementById('login-btn').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'block';
+});
+
+document.querySelector('.close-btn').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+});
+      let products = null;
+      fetch('products.json')
+      .then(response => response.json())
+      .then(data => {
+        products = data;
+        console.log(products);
+      })
+
+      let listProduct = document.querySelector('.listProduct');
+      function addDatatoHTML(){
+        products.forEach(product => {
+          let newProduct = document.createElement('a');
+          newProduct.href = '/detail.html?id=' + product.id;
+          newProduct.classList.add('item');
+          newProduct.innerHTML = `
+          <img src="${product.image1}">
+          <h2>${product.name}</h2>
+          <div class="price">${product.price}</div>
+          `;
+
+          listProduct.appendChild(newProduct);
+        })
+      }
+    </script>
+</body>
+</html>
