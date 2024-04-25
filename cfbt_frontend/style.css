@@ -16,8 +16,10 @@ a{
     max-width: 90vw;
     text-align: center;
     padding-top: 10px;
-
+    transition: transform .5s;
 }
+
+
 
 .mainmenu-border {
     padding: 10px;
@@ -51,8 +53,13 @@ a{
     }
 
     @media (max-width: 480px) {
-        font-size: 50px; /* increase the font size even more for smaller viewports */
+        font-size: 30px;/* increase the font size even more for smaller viewports */
+
+        text-align: center;
+
     }
+
+
 }
 
 .left {
@@ -61,7 +68,7 @@ a{
 
 
 .listProduct .item img{
-
+    margin-top: 10px;
     width: 100px;
     height: 100px;
     border-radius: 20px;
@@ -75,6 +82,8 @@ a{
     gap: 70px;
 }
 .listProduct .item{
+   height: 80%;
+  
     background: #eeecec;
     padding: 20px;
     border-radius: 10px;
@@ -109,8 +118,8 @@ a{
     }
 
     @media (max-width: 480px) {
-        width: 40px;
-        height: 25px;
+        width: 50px;
+        height: 30px;
     }
 }
 
@@ -121,11 +130,11 @@ a{
     margin-top: auto;
 
     @media (max-width: 768px) {
-        font-size: x-small;
+        font-size: small;
     }
 
     @media (max-width: 480px) {
-        font-size: xx-small;
+        font-size: small;
     }
 }
 
