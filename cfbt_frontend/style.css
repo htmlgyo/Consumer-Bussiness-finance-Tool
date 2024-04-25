@@ -1,6 +1,10 @@
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+
 body{
     margin: 0;
-    font-family: Poppins;
 }
 a{
     color: unset;
@@ -12,35 +16,73 @@ a{
     max-width: 90vw;
     text-align: center;
     padding-top: 10px;
+
 }
-.title{
-    font-size: xx-large;
-    padding: 20px 0;
+
+.mainmenu-border {
+    padding: 10px;
+    width: 100%;
+    height: 55px;
+    -ms-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+    -o-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+    -webkit-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+    box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
+    background:rgba(255,255,255,1);
+
+   
+    @media (max-width: 768px) {
+        height: 90px; 
+    }
+
+    @media (max-width: 480px) {
+        height: 100px; 
+    }
+}
+
+.title {
+    font-size: 35px;
+    text-align: center;
+    margin-top: 2px;
+    
+
+    @media (max-width: 768px) {
+        font-size: 40px; /* increase the font size for mobile view */
+    }
+
+    @media (max-width: 480px) {
+        font-size: 50px; /* increase the font size even more for smaller viewports */
+    }
 }
 
 .left {
     text-align: left;
 }
 
-.title{
-    background-color: #e9e9e9;
-    padding: 10px;
-    border-radius: 10px;
-}
+
 .listProduct .item img{
-    width: 90%;
-    filter: drop-shadow(0 50px 20px rgba(44, 43, 43, 0.6));
+
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;    
+    
 }
 .listProduct{
+
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 70px;
 }
 .listProduct .item{
-    background-color: #EEEEE6;
-    padding: 20px;
-    border-radius: 20px;
-}
+    height: 80%;
+ 
+     background: #f5f5f5 ;
+     padding: 20px;
+     box-shadow: 5px 5px 5px #b6b5b5 ;
+     border-radius: 10px;
+ 
+ }
 .listProduct .item h2{
     font-weight: 500;
     font-size: large;
@@ -49,6 +91,233 @@ a{
     letter-spacing: 7px;
     font-size: small;
 }
+
+/* login btn */
+
+#login-btn {
+    position: absolute;
+    left: 5;
+    margin-top: 10px;
+    border-radius: 7px;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+
+    /* Add media queries to adjust the styling based on the viewport size */
+    @media (max-width: 768px) {
+        width: 40px;
+        height: 25px;
+    }
+
+    @media (max-width: 480px) {
+        width: 40px;
+        height: 25px;
+    }
+}
+
+
+.p-login {
+    font-size: 20px;
+    text-align: center;
+    margin-top: auto;
+
+    @media (max-width: 768px) {
+        font-size: x-small;
+    }
+
+    @media (max-width: 480px) {
+        font-size: xx-small;
+    }
+}
+
+
+/*login*/
+
+.popup {
+    display: none;
+    position: fixed;
+    margin: 0 auto;
+    align-content: left;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    width: 90%; 
+    max-width: 500px; 
+    height: auto; 
+    max-height: 90%; 
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+@media (max-width: 768px) {
+    .popup-content {
+        width: 90%; 
+        max-width: 90%;
+        height: auto;
+        max-height: 90%;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 1px;
+    right: 15px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#p-pass {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        font-size: medium;
+    }
+
+    @media (max-width: 480px) {
+        font-size: small;
+    }
+}
+
+#password {
+    width: 100%;
+    padding: 15px;
+    font-size: large;
+    
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        font-size: medium;
+    }
+
+    @media (max-width: 480px) {
+        font-size: small;
+    }
+}
+
+
+#username {
+    width: 100%;
+    padding: 15px;
+    font-size: large;
+    
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        font-size: medium;
+    }
+
+    @media (max-width: 480px) {
+        font-size: small;
+    }
+}
+
+.inputbox span{
+    position: absolute;
+    left: 10px;
+    padding: 10px;
+    font-size: large;
+    
+    
+}
+
+span {
+    margin-top: -5px;
+    
+}
+
+
+#username:focus, #password:focus {
+    outline: none;
+    box-shadow: 0 0 1px 1px #000000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form button {
+    padding: 10px;
+    margin-top: 40px;
+    background-color: #ffffff;
+    border-color: gray;
+    border-width: 2px;
+    color: #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+
+    
+}
+
+
+form button:hover {
+    background-color: #000000;
+    color: #ffffff;
+
+
+    @media (max-width: 768px) {
+        background-color: #333;
+        color: #fff;
+    }
+
+    @media (max-width: 480px) {
+        background-color: hsl(0, 0%, 27%);
+        color: hsl(0, 0%, 100%);
+    }
+}
+
+#p-login {
+    font-size: 25px;
+    margin-top: -5px;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 18px;
+    }
+}
+
+
 /* detail page */
 
 .detail{
@@ -157,7 +426,7 @@ a{
     }
     .detail .buttons{
         justify-content: center;
-    }
+    }   
     #header{
         display: flex;
         align-items: center;
@@ -167,3 +436,4 @@ a{
         box-shadow: 0 5px 15px rgba;
     }
 }
+
