@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="mainmenu-border">
-        <button id="login-btn"><p class="p-login">Login</button>
+        <button id="login-btn"><p class="plogin">Login</button>
             <div class="title">  Consumer Finance Business Tool   </div>
             <div id="popup" class="popup">
                 <div class="popup-content">
@@ -47,19 +47,25 @@
     <script>
         // login
         document.getElementById('login-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'block';
-});
+            document.getElementById('popup').style.display = 'block';
+        });
 
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
-}); 
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            document.getElementById('popup').style.display = 'none';
+        }); 
 
 
-        //Important note: If you have downloaded the code
-        // but still encounter errors when running the program,
-         //    please watch the video at this link because
-        // I have shown you how to run the project properly.
-        // https://www.youtube.com/watch?v=okyfcpZfPAU&t=142s
+        // function for checking username and password
+
+        function authentication(username,password){
+             if(username === "admin" && password === "password"){
+                 return true
+             }
+             else{
+               return false
+             }
+         }
+        
         let products = null;
         // get datas from file json 
         fetch('http://localhost:3000/api/tools')
@@ -70,7 +76,7 @@ document.querySelector('.close-btn').addEventListener('click', function() {
         })
 
         function addDataToHTML(){
-    // remove datas default from HTML
+     // remove datas default from HTML
         let listProductHTML = document.querySelector('.listProduct');
 
         // add new datas
@@ -81,13 +87,33 @@ document.querySelector('.close-btn').addEventListener('click', function() {
                 newProduct.href = 'detail.html?id=' + product.id;
                 newProduct.classList.add('item');
                 newProduct.innerHTML = 
-                `<img src="images/${product.image}" alt="">`;
+                `<img src="images/${product.image}" alt="">
+                <p id="name">${product.name}</p>`;
                 listProductHTML.appendChild(newProduct);
 
             });
             
         }
-    }
+     }
+
+        const form = document.querySelector("form")
+
+        form.addEventListener("submit",(e)=>{
+            e.preventDefault()
+
+            const username = form.username.value
+            const password = form.password.value
+
+            const authenticated = authentication(username,password)
+
+            if(authenticated){
+                window.location.href = "adminindex.html"
+            }
+            else{
+                alert("Invalid Username/Password")
+            }
+        })
+
 
     </script>
 </body>

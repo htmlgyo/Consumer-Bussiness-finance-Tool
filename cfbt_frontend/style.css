@@ -20,6 +20,14 @@ a{
     
 }
 
+#name{
+   
+    
+    max-width: 90vw;
+    text-align: center;
+   
+}
+
 
 
 
@@ -105,6 +113,7 @@ a{
 
 .listProduct .item{
    height: 80%;
+   align-items: center;
     background: #f5f5f5 ;
     padding: 20px;
     box-shadow: 5px 5px 5px #b6b5b5 ;
@@ -169,7 +178,7 @@ a{
 }
 
 
-.p-login {
+.plogin {
     font-size: 20px;
     text-align: center;
     margin-top: auto;

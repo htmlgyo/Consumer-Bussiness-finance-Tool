@@ -31,7 +31,8 @@ function showDetail() {
         newProduct.href = 'detail.html?id=' + product.id;
         newProduct.classList.add('item');
         newProduct.innerHTML =
-            `<img src="images/${product.image}" alt="">`;
+            `<img src="images/${product.image}" alt="">
+            <p>${product.name}</p>`;
         listProduct.appendChild(newProduct);
     });
 }
