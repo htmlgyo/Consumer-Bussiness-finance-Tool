@@ -26,12 +26,12 @@
                         <div class="inputbox">
                             
                          
-                            <input type="text" id="username" placeholder="Username" required>
+                            <input type="text" id="email" placeholder="Email" required>
                             
                             <input type="password" id="password" placeholder="Password" required>
                         </div>
                         
-                        <button type="submit"><p id="p-login">Login</button></p>
+                        <button type="submit"><p id="submit">Login</button></p>
                     </form>
                 </div>
             </div>
@@ -44,77 +44,7 @@
         </div>
     </div>
 
-    <script>
-        // login
-        document.getElementById('login-btn').addEventListener('click', function() {
-            document.getElementById('popup').style.display = 'block';
-        });
-
-        document.querySelector('.close-btn').addEventListener('click', function() {
-            document.getElementById('popup').style.display = 'none';
-        }); 
-
-
-        // function for checking username and password
-
-        function authentication(username,password){
-             if(username === "admin" && password === "password"){
-                 return true
-             }
-             else{
-               return false
-             }
-         }
-        
-        let products = null;
-        // get datas from file json 
-        fetch('http://localhost:3000/api/tools')
-            .then(response => response.json())
-            .then(data => {
-                products = data;
-                addDataToHTML();
-        })
-
-        function addDataToHTML(){
-     // remove datas default from HTML
-        let listProductHTML = document.querySelector('.listProduct');
-
-        // add new datas
-        if(products != null) // if has data
-        {
-            products.forEach(product => {
-                let newProduct = document.createElement('a');
-                newProduct.href = 'detail.html?id=' + product.id;
-                newProduct.classList.add('item');
-                newProduct.innerHTML = 
-                `<img src="images/${product.image}" alt="">
-                <p id="name">${product.name}</p>`;
-                listProductHTML.appendChild(newProduct);
-
-            });
-            
-        }
-     }
-
-        const form = document.querySelector("form")
-
-        form.addEventListener("submit",(e)=>{
-            e.preventDefault()
-
-            const username = form.username.value
-            const password = form.password.value
-
-            const authenticated = authentication(username,password)
-
-            if(authenticated){
-                window.location.href = "adminindex.html"
-            }
-            else{
-                alert("Invalid Username/Password")
-            }
-        })
-
-
-    </script>
+    <script type="module" src="login.js" defer></script>
+    <script src="tools.js"></script>
 </body>
 </html>
