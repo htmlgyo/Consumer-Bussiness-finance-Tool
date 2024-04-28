@@ -471,12 +471,11 @@ form button:hover {
 @media only screen and (max-width: 768px) {
     .listProduct{
         grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
         position: fixed;
     }
     .detail{
         text-align: center;
-        grid-template-columns: 1fr;
+        grid-template-columns: 2fr;
     }
     .detail .image img{
         width: unset;
