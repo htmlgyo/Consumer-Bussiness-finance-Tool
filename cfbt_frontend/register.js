@@ -28,8 +28,8 @@ submit.addEventListener("click", function (event) {
   event.preventDefault()
 
   //inputs
-  const email = document.getElementById('email1').value;
-  const password = document.getElementById('password1').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {

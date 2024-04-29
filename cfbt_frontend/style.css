@@ -160,11 +160,34 @@ a {
     font-size: small;
 }
 
+#logout-btn {
+    position: absolute;
+    left: 5;
+    margin-top: 10px;
+    border-radius: 7px;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+
+    @media (max-width: 768px) {
+        width: 40px;
+        height: 25px;
+    }
+
+    @media (max-width: 480px) {
+        width: 40px;
+        height: 25px;
+    }
+}
+
 /* login btn */
 
 #login-btn {
-    position: absolute;
-    left: 5;
+    position: fixed;
+    left: 10px;
     margin-top: 10px;
     border-radius: 7px;
     width: 90px;
@@ -312,6 +335,44 @@ a {
     }
 }
 
+.off-screen-menu #email {
+    width: 90%;
+    padding: 15px;
+    font-size: large;
+
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        font-size: medium;
+    }
+
+    @media (max-width: 480px) {
+        font-size: small;
+    }
+}
+
+.off-screen-menu #password {
+    width: 90%;
+    padding: 15px;
+    font-size: large;
+
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    @media (max-width: 768px) {
+        font-size: medium;
+    }
+
+    @media (max-width: 480px) {
+        font-size: small;
+    }
+}
+
 .inputbox span {
     position: absolute;
     left: 10px;
@@ -381,7 +442,8 @@ form button:hover {
 
 #submit {
     font-size: 25px;
-    margin-top: -5px;
+    margin-top: auto;
+    margin-bottom: auto;
 
     @media (max-width: 768px) {
         font-size: 20px;
@@ -390,6 +452,16 @@ form button:hover {
     @media (max-width: 480px) {
         font-size: 18px;
     }
+}
+
+.submit1 {
+    border-radius: 10px;
+    background-color: white;
+    border-color: gray;
+    
+}
+form #submit {
+    margin-top: -5px;
 }
 
 
@@ -546,10 +618,12 @@ form button:hover {
     justify-content: center;
     text-align: center;
     font-size: 3rem;
-    transition: .3s ease;
+    transition: .5s ease;
+    border-style: ridge;
 }
 .off-screen-menu.active {
-    border-radius: 15px;
+   
+   
     border-color: #000000;
     left: 0;
     height: 120%;
