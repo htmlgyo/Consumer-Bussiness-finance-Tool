@@ -14,8 +14,9 @@ a {
 
 .container {
     width: 900px;
-    max-width: 90vw;
+
     margin: auto;
+    max-width: 90vw;
     text-align: center;
     padding-top: 10px;
 
@@ -34,45 +35,62 @@ a {
 
 .mainmenu-border {
     padding: 10px;
-    width: auto;
+    width: 100%;
     height: 50px;
-    -ms-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-    -o-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-    -webkit-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-    -moz-box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-    box-shadow:0px 4px 4px 1px rgba(0,0,0,0.25);
-    background:rgba(255,255,255,1);
-}
-   
-    @media only screen and (max-width: 768px) { 
-        .mainmenu-border {
-           height: inherit;
-        }
+    -ms-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+    -o-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 1);
+
+
+    @media (max-width: 768px) {
+        height: 90px;
     }
-    
-    @media only screen and (max-width: 500px) {
-        .mainmenu-border {
-            width: 500px;
-           height: inherit;
-        }
+
+    @media (max-width: 480px) {
+        height: 100px;
+    }
 }
 
 .title {
     font-size: 35px;
     text-align: center;
     margin-top: 2px;
-}
 
-@media only screen and (max-width: 768px) { 
-    .title {
-       font-size: 20px;
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+        /* increase the font size for mobile view */
+    }
+
+    @media (max-width: 480px) {
+        font-size: 50px;
+        /* increase the font size even more for smaller viewports */
     }
 }
 
-@media only screen and (max-width: 500px) {
-    .title {
-        font-size: 25px;
+.titletool {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 2px;
+
+
+    @media (max-width: 768px) {
+        font-size: 40px;
+        /* increase the font size for mobile view */
     }
+
+    @media (max-width: 480px) {
+        font-size: 30px;
+        /* increase the font size even more for smaller viewports */
+
+        text-align: center;
+
+    }
+
+
 }
 
 .left {
@@ -88,7 +106,9 @@ a {
 
 
 }
-.listProduct{
+
+.listProduct {
+
     width: 100%;
     display: grid;
     margin-top: 60px;
@@ -153,37 +173,31 @@ a {
     border-color: gray;
     border-width: 2px;
     border-style: solid;
-}
 
-@media only screen and (max-width: 768px) { 
-    #login-btn {
-        width: 70px;
-        height: 30px;
+    /* Add media queries to adjust the styling based on the viewport size */
+    @media (max-width: 768px) {
+        width: 40px;
+        height: 25px;
     }
-}
 
-@media only screen and (max-width: 500px) {
-    #login-btn {
+    @media (max-width: 480px) {
         width: 40px;
         height: 25px;
     }
 }
 
-.p-login {
+
+.plogin {
     font-size: 20px;
     text-align: center;
     margin-top: auto;
-}
 
-@media only screen and (max-width: 768px) { 
-    .p-login {
-        font-size: 15px;
+    @media (max-width: 768px) {
+        font-size: x-small;
     }
-}
 
-@media only screen and (max-width: 500px) {
-    .p-login {
-        font-size: 10px;
+    @media (max-width: 480px) {
+        font-size: xx-small;
     }
 }
 
@@ -225,7 +239,7 @@ a {
 
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .popup-content {
         width: 90%;
         max-width: 90%;
@@ -249,16 +263,12 @@ a {
     border: 1px solid black;
     border-radius: 10px;
     box-sizing: border-box;
-}
 
-@media only screen and (max-width: 768px) { 
-    #p-pass {
+    @media (max-width: 768px) {
         font-size: medium;
     }
-}
 
-@media only screen and (max-width: 500px) {
-    #p-pass {
+    @media (max-width: 480px) {
         font-size: small;
     }
 }
@@ -272,67 +282,16 @@ a {
     border: 1px solid black;
     border-radius: 10px;
     box-sizing: border-box;
-}
 
-#password1 {
-    width: 80%;
-    padding: 15px;
-    font-size: large;
-
-    margin-top: 30px;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-@media only screen and (max-width: 768px) { 
-    #password {
+    @media (max-width: 768px) {
         font-size: medium;
     }
-}
 
-@media only screen and (max-width: 500px) {
-    #password {
+    @media (max-width: 480px) {
         font-size: small;
     }
 }
 
-.plogin {
-    font-size: 20px;
-    text-align: center;
-    margin-top: auto;
-
-    @media (max-width: 768px) {
-        font-size: x-small;
-    }
-
-    @media (max-width: 480px) {
-        font-size: xx-small;
-    }
-}
-
-#submit{
-    font-size: 25px;
-    margin-top: -2px;
-    margin-bottom: -2px;
-    height: min-content;
-    width: min-content;
-
-
-    @media (max-width: 768px) {
-        font-size: 20px;
-    }
-
-    @media (max-width: 480px) {
-        font-size: 18px;
-    }
-}
-
-.submit1 {
-    margin-top: 20px;
-    border-radius: 5px;
-    background-color: white;
-}
 
 #email {
     width: 100%;
@@ -343,33 +302,17 @@ a {
     border: 1px solid black;
     border-radius: 10px;
     box-sizing: border-box;
-}
 
-#email1 {
-    width: 80%;
-    padding: 15px;
-    font-size: large;
-
-    margin-top: 30px;
-    border: 1px solid black;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-@media only screen and (max-width: 768px) { 
-    #username  {
+    @media (max-width: 768px) {
         font-size: medium;
     }
-}
 
-@media only screen and (max-width: 500px) {
-    #username  {
+    @media (max-width: 480px) {
         font-size: small;
     }
 }
 
-
-.inputbox span{
+.inputbox span {
     position: absolute;
     left: 10px;
     padding: 10px;
@@ -406,58 +349,48 @@ form button {
     cursor: pointer;
     width: 100%;
     height: 50px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
+
+
 }
 
-@media only screen and (max-width: 768px) { 
-    form button {
-        width: 100%;;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    form button {
-        width: 100%;;
-    }
-}
 
 form button:hover {
     background-color: #000000;
     color: #ffffff;
-}
 
-@media only screen and (max-width: 768px) { 
-    form button:hover {
+
+    @media (max-width: 768px) {
         background-color: #333;
         color: #fff;
     }
-}
 
-@media only screen and (max-width: 500px) {
-    form button:hover {
+    @media (max-width: 480px) {
         background-color: hsl(0, 0%, 27%);
         color: hsl(0, 0%, 100%);
     }
 }
 
-#p-login{
+#submit {
     font-size: 25px;
     margin-top: -5px;
-}
 
-@media only screen and (max-width: 768px) { 
-    #p-login {
+    @media (max-width: 768px) {
         font-size: 20px;
-        margin-top: auto;
     }
-}
 
-@media only screen and (max-width: 500px) {
-    #p-login {
+    @media (max-width: 480px) {
         font-size: 18px;
-        margin-top: auto;
     }
 }
-
 
 
 /* detail page */
@@ -560,12 +493,11 @@ form button:hover {
 @media only screen and (max-width: 768px) {
     .listProduct {
         grid-template-columns: repeat(2, 1fr);
-        position: fixed;
     }
 
     .detail {
         text-align: center;
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr;
     }
 
     .detail .image img {

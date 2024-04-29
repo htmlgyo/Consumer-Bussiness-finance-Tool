@@ -35,7 +35,6 @@ submit.addEventListener("click", function (event) {
     .then((userCredential) => {
       //sign up
       const user = userCredential.user;
-      
       window.location.href = "adminindex.html";
     })
     .catch((error) => {
