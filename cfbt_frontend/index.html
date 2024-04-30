@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="mainmenu-border">
-        <button id="login-btn"><p class="p-login">Login</button>
+        <button id="login-btn"><p class="plogin">Login</button>
             <div class="title">  Consumer Finance Business Tool   </div>
             <div id="popup" class="popup">
                 <div class="popup-content">
@@ -26,12 +26,12 @@
                         <div class="inputbox">
                             
                          
-                            <input type="text" id="username" placeholder="Username" required>
+                            <input type="text" id="email" placeholder="Email" required>
                             
                             <input type="password" id="password" placeholder="Password" required>
                         </div>
                         
-                        <button type="submit"><p id="p-login">Login</button></p>
+                        <button type="submit"><p id="submit">Login</button></p>
                     </form>
                 </div>
             </div>
@@ -44,51 +44,7 @@
         </div>
     </div>
 
-    <script>
-        // login
-        document.getElementById('login-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'block';
-});
-
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
-}); 
-
-
-        //Important note: If you have downloaded the code
-        // but still encounter errors when running the program,
-         //    please watch the video at this link because
-        // I have shown you how to run the project properly.
-        // https://www.youtube.com/watch?v=okyfcpZfPAU&t=142s
-        let products = null;
-        // get datas from file json 
-        fetch('http://localhost:3000/api/tools')
-            .then(response => response.json())
-            .then(data => {
-                products = data;
-                addDataToHTML();
-        })
-
-        function addDataToHTML(){
-    // remove datas default from HTML
-        let listProductHTML = document.querySelector('.listProduct');
-
-        // add new datas
-        if(products != null) // if has data
-        {
-            products.forEach(product => {
-                let newProduct = document.createElement('a');
-                newProduct.href = 'detail.html?id=' + product.id;
-                newProduct.classList.add('item');
-                newProduct.innerHTML = 
-                `<img src="images/${product.image}" alt="">`;
-                listProductHTML.appendChild(newProduct);
-
-            });
-            
-        }
-    }
-
-    </script>
+    <script type="module" src="login.js" defer></script>
+    <script src="tools.js"></script>
 </body>
 </html>
