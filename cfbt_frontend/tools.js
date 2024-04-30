@@ -1,3 +1,5 @@
+
+
 let products = null;
         // get datas from file json 
         fetch('http://localhost:3000/api/tools')
@@ -24,6 +26,8 @@ let products = null;
                 listProductHTML.appendChild(newProduct);
 
             });
-            
         }
      }
+
+
+     

@@ -31,8 +31,8 @@ router.get('/:id', async (req, res) => {
 // Add a new tool
 router.post('/', async (req, res) => {
   try {
-    const { name, description, link, image } = req.body;
-    await db.query('INSERT INTO tools (name, description,  link, image,) VALUES (?, ?, ?, ?)', [name, description, link, image]);
+    const { name, tags, description, about, link, image } = req.body;
+    await db.query('INSERT INTO tools (name, tags, description, about, link, image) VALUES (?, ?, ?, ?, ?, ?)', [name, tags, description, about, link, image]);
     res.json({ message: 'Tool added successfully' });
   } catch (err) {
     console.error(err.message);

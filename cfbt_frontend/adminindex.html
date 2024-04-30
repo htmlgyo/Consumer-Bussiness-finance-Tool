@@ -55,7 +55,23 @@
         </div>
 
     </div>
-
+    <div id="popup_add" class="popup">
+        <div class="popup-content">
+            <span class="close-add-btn">&times;</span>
+            <h2 style="text-align: center;">Add</h2>
+            <form id="toolsForm">
+                <div class="inputbox">
+                    <input type="text" id="email" name="name" placeholder="name" required>
+                    <input type="text" id="email" name="tags" placeholder="tags" required>
+                    <textarea id="email" name="description" placeholder="description" name="description" rows="2" cols="50"></textarea>
+                    <textarea id="email" name="about" placeholder="about" rows="2" cols="50"></textarea>
+                    <input type="text" id="email" name="link" placeholder="link" required>
+                    <input type="file" id="fileInput" name="image" placeholder="Insert image here" required>
+                </div>
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
     <script>
 
         const hamMenu = document.querySelector(".ham-menu");
@@ -74,10 +90,12 @@
             window.location.replace("index.html")
         })
 
-
+        document.querySelector('.close-add-btn').addEventListener('click', function() {
+            document.getElementById('popup_add').style.display = 'none';
+        });
 
     </script>
-    <script src="tools.js"></script>
+    <script src="toolsAdmin.js"></script>
     <script type="module" src="register.js" defer></script>
 
 
