@@ -34,6 +34,9 @@ a {
 
 
 .mainmenu-border {
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 10px;
     width: 100%;
     height: 50px;
@@ -43,6 +46,9 @@ a {
     -moz-box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.25);
     background: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 
     @media (max-width: 768px) {
@@ -163,6 +169,12 @@ a {
 #logout-btn {
     position: absolute;
     left: 5;
+}
+/* login btn */
+
+#login-btn {
+    position: fixed;
+    left: 10px;
     margin-top: 10px;
     border-radius: 7px;
     width: 90px;
@@ -197,7 +209,54 @@ a {
     border-width: 2px;
     border-style: solid;
 
-    /* Add media queries to adjust the styling based on the viewport size */
+    @media (max-width: 768px) {
+        width: 40px;
+        height: 25px;
+    }
+
+    @media (max-width: 480px) {
+        width: 40px;
+        height: 25px;
+    }
+}
+
+/* login btn */
+
+#login-btn {
+    position: fixed;
+    left: 10px;
+    margin-top: 10px;
+    border-radius: 7px;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+
+    @media (max-width: 768px) {
+        width: 40px;
+        height: 25px;
+    }
+
+    @media (max-width: 480px) {
+        width: 40px;
+        height: 25px;
+    }
+}
+
+#logout-btn {
+    position: absolute;
+    left: 5;
+    margin-top: 10px;
+    border-radius: 7px;
+    width: 90px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+
     @media (max-width: 768px) {
         width: 40px;
         height: 25px;
@@ -641,11 +700,19 @@ nav {
 
 /* ham menu */
 .ham-menu {
+    position: fixed;
+    top: 0;
     height: 50px;
     width: 40px;
-    margin-right: auto;
     margin-top: -60px;
-    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: left;
+    justify-content: left;
 }
 
 .ham-menu span {
@@ -685,5 +752,20 @@ nav {
 }
 
 .register-form {
-    margin-top: 70px;
+    margin-top: -100px;
+}
+
+.logout-btn {
+    margin-top: -100px;
+}
+
+.submit1 {
+    border-radius: 7px;
+    background-color: white;
+    border-color: gray;
+    margin-bottom: auto;
+}
+
+form #submit {
+    margin-top: -5px;
 }
