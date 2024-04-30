@@ -21,7 +21,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-
+document.addEventListener('keypress', function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    submit.click();
+  }
+});
 // submit Button
 const submit = document.getElementById('submit');
 submit.addEventListener("click", function (event) {
