@@ -36,7 +36,7 @@ submit.addEventListener("click", function (event) {
       //sign up
       const user = userCredential.user;
       alert("Account Created")
-      
+
     })
     .catch((error) => {
       const errorCode = error.code;

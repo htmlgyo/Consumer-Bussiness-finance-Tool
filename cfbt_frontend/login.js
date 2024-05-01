@@ -21,7 +21,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-document.addEventListener('keypress', function(event) {
+document.addEventListener('keypress', function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     submit.click();
@@ -52,10 +52,10 @@ submit.addEventListener("click", function (event) {
 
 
 
-document.getElementById('login-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'block';
+document.getElementById('login-btn').addEventListener('click', function () {
+  document.getElementById('popup').style.display = 'block';
 });
 
-document.querySelector('.close-btn').addEventListener('click', function() {
-    document.getElementById('popup').style.display = 'none';
+document.querySelector('.close-btn').addEventListener('click', function () {
+  document.getElementById('popup').style.display = 'none';
 }); 
