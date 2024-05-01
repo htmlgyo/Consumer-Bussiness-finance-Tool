@@ -182,6 +182,7 @@ a{
     display: flex;
     gap: 20px;
     margin-bottom: 20px;
+    margin-left: -135px;
 }
 .detail .buttons button{
     background-color: #eee;
