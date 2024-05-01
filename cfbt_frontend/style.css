@@ -171,55 +171,7 @@ a {
     left: 5;
 }
 
-/* login btn */
 
-#login-btn {
-    position: fixed;
-    left: 10px;
-    margin-top: 10px;
-    border-radius: 7px;
-    width: 90px;
-    height: 40px;
-    background-color: rgb(255, 255, 255);
-    border-color: gray;
-    border-width: 2px;
-    border-style: solid;
-
-    @media (max-width: 768px) {
-        width: 40px;
-        height: 25px;
-    }
-
-    @media (max-width: 480px) {
-        width: 40px;
-        height: 25px;
-    }
-}
-
-/* login btn */
-
-#login-btn {
-    position: fixed;
-    left: 10px;
-    margin-top: 10px;
-    border-radius: 7px;
-    width: 90px;
-    height: 40px;
-    background-color: rgb(255, 255, 255);
-    border-color: gray;
-    border-width: 2px;
-    border-style: solid;
-
-    @media (max-width: 768px) {
-        width: 40px;
-        height: 25px;
-    }
-
-    @media (max-width: 480px) {
-        width: 40px;
-        height: 25px;
-    }
-}
 
 /* login btn */
 
@@ -287,6 +239,7 @@ a {
 
 
 
+
 /*login*/
 
 .popup {
@@ -338,6 +291,15 @@ a {
     font-size: 50px;
     cursor: pointer;
 }
+
+.close-add-btn {
+    position: absolute;
+    top: 1px;
+    right: 15px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
 
 #p-pass {
     width: 100%;
