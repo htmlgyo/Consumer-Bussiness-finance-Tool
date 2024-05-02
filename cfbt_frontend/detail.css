@@ -22,7 +22,7 @@ a {
 
 }
 .buttons{
-    margin-left: -100px;
+    margin-left: -130px;
     
 }
 
@@ -163,9 +163,10 @@ a {
 }
 
 .detail .image img {
-    margin-right: 100px;
+    margin-right: 50px;
     border-radius: 30px;
-    width: 60%;
+    width: 300px;
+    align-items: center;
     
 
     
@@ -176,7 +177,7 @@ a {
 .detail .image {
     margin: auto;
     
-    left: 50px;
+    right: 50px;
     position: relative;
 }
 
