@@ -67,6 +67,12 @@
                     <textarea id="email" name="description" placeholder="Description" name="description" rows="2" cols="50" required></textarea>
                     <textarea id="email" name="about" placeholder="About" rows="2" cols="50" ></textarea>
                     <input type="text" id="email" name="link" placeholder="Path" required>
+                    <input type="text" id="email" name="name" placeholder="name" required>
+                    <input type="text" id="email" name="tags" placeholder="tags" required>
+                    <textarea id="email" name="description" placeholder="description" name="description" rows="2"
+                        cols="50"></textarea>
+                    <textarea id="email" name="about" placeholder="about" rows="2" cols="50"></textarea>
+                    <input type="text" id="email" name="link" placeholder="link" required>
                     <input type="file" id="fileInput" name="image" placeholder="Insert image here" required>
                 </div>
                 <button type="submit">Create</button>
@@ -91,7 +97,7 @@
             window.location.replace("index.html")
         })
 
-        document.querySelector('.close-add-btn').addEventListener('click', function() {
+        document.querySelector('.close-add-btn').addEventListener('click', function () {
             document.getElementById('popup_add').style.display = 'none';
         });
 
