@@ -98,12 +98,13 @@ a{
     
 }
 .listProduct{
+    
     width: 100%;
     display: grid;
     margin-top: 60px;
     grid-template-columns: repeat(4, 1fr);
     gap: 70px;
-    
+
 }
 
 
